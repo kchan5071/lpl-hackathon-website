@@ -49,7 +49,7 @@ class Stock_Feedback:
         percent_defensive = self.get_defensive_percentage(zipped_sector)
         defensive_message = self.get_defensive_message(percent_defensive)
         significant_sectors = self.get_significant_sectors(zipped_sector)
-        response = self.call_openai(defensive_message + significant_sectors)
+        response = self.call_openai(defensive_message + significant_sectors, input_stocks, percentages)
         print(response)
         return response
 
@@ -122,7 +122,7 @@ class Stock_Feedback:
                 message += f'{each[0]} is a significant sector in the portfolio'
         return message
     
-    def call_openai(self, message):
+    def call_openai(self, message, input_stocks, percentages):
         if message:
             completion = self.client.chat.completions.create(
                 model="gpt-4o-mini",
@@ -130,7 +130,7 @@ class Stock_Feedback:
                     {"role": "developer", "content": "You are a helpful assistant."},
                     {
                         "role": "user",
-                        "content": f'summarize in a paragraph format: {message}.'
+                        "content": f'summarize in a paragraph format: {message}, make sure to list the following stocks and percentages {input_stocks, percentages}.'
                     }
                 ]
             )

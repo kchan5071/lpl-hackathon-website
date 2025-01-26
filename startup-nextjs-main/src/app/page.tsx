@@ -24,9 +24,6 @@ export default function Home() {
       <ScrollUp />
       <Hero />
       <AddEntry />
-      {/* <AboutSectionOne />
-      <AboutSectionTwo /> */}
-      {/* <Contact /> */}
     </>
   );
 }

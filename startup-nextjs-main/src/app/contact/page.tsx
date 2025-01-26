@@ -11,14 +11,9 @@ export const metadata: Metadata = {
 
 const ContactPage = () => {
   return (
-    <>
-      <Breadcrumb
-        pageName="Meet the Team"
-        description="The lovely devs that brought you this product."
-      />
-
+    <div className="bg-white">
       <Contact />
-    </>
+    </div>
   );
 };
 

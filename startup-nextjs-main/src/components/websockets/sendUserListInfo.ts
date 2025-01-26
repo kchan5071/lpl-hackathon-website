@@ -1,9 +1,34 @@
+import { useState, useEffect } from 'react';
+
 // export const useWebSocket = () => {
+
 //   // Function to establish connection and send data
 //   const establishConnectionAndSend = ({ firstNames, lastNames }) => {
-//     const socket = new WebSocket("ws://localhost:8079");
+//     console.log("attempting connection to web socket");
+//     const socket = new WebSocket("ws://127.0.0.1:8079");
+//     // socket.onopen = () => {
+//     //   setSocket(socket);
+//     // }
 
-//     // Handle connection open
+
+//     // socket.onmessage = (event) => {
+//     //   console.log("Connected to WebSocket server");
+
+//     //   // Send firstNames and lastNames as JSON string
+//     //   const jsonString = JSON.stringify({
+//     //     firstNames,
+//     //     lastNames,
+//     //   });
+
+//     //   socket.send(jsonString);
+
+//     // }
+
+//     // return () => {
+//     //   if (socket.readyState === WebSocket.OPEN) {
+//     //     socket.close();
+//     //   }
+//     // }
 //     socket.addEventListener("open", () => {
 //       console.log("Connected to WebSocket server");
 
@@ -33,6 +58,7 @@
 //   };
 
 //   // Return the function to call and the card data to render
+
 //   return { establishConnectionAndSend };
 // };
 
