@@ -42,6 +42,8 @@ class Stock_Feedback:
         percentages = self.verify_percentages(percentages)
         #check that all stocks are in the master list
         input_stocks = self.verify_tickers(input_stocks)
+        if input_stocks == []:
+            return "No valid stocks in the input"
         stock_sectors, stock_sector_percentages,_, _, = self.track_sector_percentages(input_stocks, percentages)
         zipped_sector = list(zip(stock_sectors, stock_sector_percentages))
         percent_defensive = self.get_defensive_percentage(zipped_sector)

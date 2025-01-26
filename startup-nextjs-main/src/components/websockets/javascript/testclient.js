@@ -29,11 +29,11 @@ const WebSocket = require('ws');
 
 const socket = new WebSocket('ws://localhost:8079');
 
-const myList1 = [1, 2, 3, 4, 5];
+const stock_names = ["APPL", "GOOGL", "AMZN", "TSLA"];
 
-const myList2 = [6, 7, 8, 9, 10];
+const stock_percentages = [6, 7, 8, 9];
 
-const myLists = {myList1, myList2};
+const myLists = {stock_names, stock_percentages};
 
 const jsonString = JSON.stringify(myLists);
 
@@ -43,7 +43,7 @@ socket.addEventListener('open', (event) => {
 
 
 
-    //socket.send('Ur fucking ugly');
+    // socket.send('Ur fu  cking ugly');
     socket.send(jsonString);
     isSocketOpen = true; // Set to true when connection is open
     //sendMessageButton.disabled = false; // Enable the button after connection is open

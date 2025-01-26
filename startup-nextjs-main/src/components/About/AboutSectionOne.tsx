@@ -24,8 +24,8 @@ const AboutSectionOne = () => {
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
-                title="Crafted for Startup, SaaS and Business Sites."
-                paragraph="The main ‘thrust’ is to focus on educating attendees on how to best protect highly vulnerable business applications with interactive panel discussions and roundtables."
+                title="About our Project"
+                paragraph="At Financial Portfolio, we empower investors to build a smarter, more optimized stock portfolio with the help of cutting-edge AI technology. Whether you're a seasoned investor or just starting your financial journey, our platform provides tailored recommendations to help you make informed decisions and achieve your financial goals."
                 mb="44px"
               />
 
